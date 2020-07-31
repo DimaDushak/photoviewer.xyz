@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import LikesBlockContainer from '../../../../containers/LikesBlockContainer';
 import { ButtonComponent } from '../../../ButtonComponent';
 import { UserLinksBlock } from '../../../UserLinksBlock';
+import { PhotoImage } from '../../../PhotoImage';
 import { Text } from '../../../Text';
 import { Break } from '../../../Break';
 import { getDate } from '../../../../utils/helpers';
@@ -15,6 +16,8 @@ const landscapePhoto = classNames(styles.photo, styles.photo_landscape);
 const portraitPhoto = classNames(styles.photo, styles.photo_portrait);
 const leftButton = classNames(styles.button, styles.leftButton);
 const rightButton = classNames(styles.button, styles.rightButton)
+
+const minTouchLength = 30;
 
 interface IFullPhotoProps {
     inform: any;
@@ -36,6 +39,11 @@ export function FullPhoto(props: IFullPhotoProps) {
     } = props;
     const { width, height, id, user, created_at, urls, alt_description } = inform;
     const isLandscapeOrientation = width > height;
+
+    const handleTouch = (xAbs: number) => {
+        if (xAbs > minTouchLength) goToNext();
+        if (xAbs < -minTouchLength && currentIndex != 0) goToPrevious();
+    };
 
     return (
         <figure
@@ -61,11 +69,12 @@ export function FullPhoto(props: IFullPhotoProps) {
                 className={styles.imageBlock}
                 onClick={(e) => e.stopPropagation()}
             >
-                <img
+                <PhotoImage
                     className={isLandscapeOrientation ? landscapePhoto : portraitPhoto}
                     src={urls.regular}
                     alt={alt_description}
                     title={alt_description}
+                    onTouch={handleTouch}
                 />
                 {!isDesktop && (
                     <>

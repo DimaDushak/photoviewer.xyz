@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { PhotoInform } from './PhotoInform';
+import { PhotoImage } from '../../../PhotoImage';
 import { NOOP } from '../../../../utils/helpers';
 import styles from './photo.css';
 
@@ -30,6 +31,10 @@ export function Photo(props: IPhotoProps) {
     
     React.useEffect(() => setIsShownInform(inform.id == id), [id]);
 
+    const handleTouch = (xAbs: number) => {
+        if (xAbs == 0) handleClick();
+    };
+
     return (
         <figure
             className={styles.figureStyle}
@@ -41,6 +46,8 @@ export function Photo(props: IPhotoProps) {
             }}
             title={alt_description}
             onClick={handleClick}
+            onTouchStart={(e) => e.preventDefault()}
+            onTouchEnd={(e) => e.preventDefault()}
         >
             {isShownInform && isTablet && (
                 <PhotoInform inform={inform} showInform={showInform} />
@@ -50,10 +57,11 @@ export function Photo(props: IPhotoProps) {
                     <PhotoInform inform={inform} />
                 </div>
             )}
-            <img
+            <PhotoImage
                 className={styles.photo}
                 src={urls.raw + `&w=${maxPhotoWidth}`}
                 alt={alt_description}
+                onTouch={handleTouch}
             />
         </figure>
     );
