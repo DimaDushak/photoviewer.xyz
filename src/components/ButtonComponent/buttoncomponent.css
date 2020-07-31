@@ -1,0 +1,52 @@
+.button span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: background-color 0.3s;
+}
+
+.button:hover span {
+    transition: background-color 0.3s;
+}
+
+.col_white span {
+    background-color: var(--lightGrey);
+}
+
+.col_white:hover span {
+    background-color: var(--white);
+}
+
+.col_black span {
+    background-color: var(--lightBlack);
+}
+
+.col_black:hover span {
+    background-color: var(--black);
+}
+
+.type_close span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.type_close span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.type_arrow6 span:first-child {
+    transform: translate(-50%, calc(-50% + 6px)) rotate(45deg);
+}
+
+.type_arrow6 span:last-child {
+    transform: translate(-50%, calc(-50% - 6px)) rotate(-45deg);
+}
+
+@media (max-width: 767px) {
+    .type_arrow6 span:first-child {
+        transform: translate(-50%, calc(-50% + 5px)) rotate(45deg);
+    }
+    
+    .type_arrow6 span:last-child {
+        transform: translate(-50%, calc(-50% - 5px)) rotate(-45deg);
+    }
+}

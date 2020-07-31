@@ -1,0 +1,18 @@
+.figureStyle {
+    position: relative;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .figureStyle {
+        padding-bottom: 30px;
+    }
+
+    .photo {
+        cursor: zoom-in;
+    }
+}

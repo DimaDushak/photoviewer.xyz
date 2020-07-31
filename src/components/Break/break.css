@@ -1,0 +1,37 @@
+.s8 {
+    margin-right: 8px;
+}
+
+.s5 {
+    margin-right: 5px;
+}
+
+.s10 {
+    margin-right: 10px;
+}
+
+.s20 {
+    margin-right: 20px;
+}
+
+.top.s5 {
+    margin-top: 5px;
+}
+
+.top.s10 {
+    margin-top: 10px;
+}
+
+.top.s20 {
+    margin-top: 20px;
+}
+
+.inline {
+    display: inline;
+}
+
+@media (max-width: 767px) {
+    .m_none {
+        display: none;
+    }
+}

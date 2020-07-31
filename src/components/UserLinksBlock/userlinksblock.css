@@ -1,0 +1,51 @@
+.linksBlock {
+    display: flex;
+    align-items: center;
+}
+
+.userImageLinkBlock {
+    position: relative;
+}
+
+.userImageLinkBlock:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    pointer-events: none;
+    border: 1px solid var(--imageLinkBorder);
+    border-radius: 50%;
+}
+
+.userImageLink img {
+    border-radius: 50%;
+    display: block;
+    transition: box-shadow 0.3s;
+    width: 35px;
+    height: 35px;
+}
+
+.userImageLink:hover img {
+    transition: box-shadow 0.3s;
+}
+
+.greyShadow:hover {
+    box-shadow: 0 0 15px var(--lightGrey);
+}
+
+.blackShadow:hover {
+    box-shadow: 0 0 15px var(--black);
+}
+
+@media (max-width: 767px) {
+    .userImageLink img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .greyShadow:hover {
+        box-shadow: 0 0 15px var(--black);
+    }
+}

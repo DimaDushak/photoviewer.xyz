@@ -1,0 +1,51 @@
+{
+  "name": "photoviewer.xyz",
+  "version": "1.0.0",
+  "description": "Viewer for streaming photos from the Unsplash service",
+  "main": "index.jsx",
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "Dmitry Dushak",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "unsplash-js": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/unsplash-js": "^6.0.1",
+    "autoprefixer": "^9.8.5",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

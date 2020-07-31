@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/app/fonts/roboto-v20-latin_cyrillic-regular.eot');
+	src: local('Roboto'), local('Roboto-Regular'),
+		 url('/app/fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+		 url('/app/fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'),
+		 url('/app/fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
+		 url('/app/fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'),
+		 url('/app/fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg');
+}
+
+:root {
+    --white: #FFFFFF;
+    --lightBlack: #4e4c4c;
+    --black: #000000;
+    --lightGrey: #d5dce4;
+    --imageLinkBorder: rgba(0, 0, 0, .05);
+    --greyShadow: rgba(0, 0, 0, 0.3);
+    --buttonBackground: rgba(0, 0, 0, 0.4);
+    --photoBackground: rgba(0, 0, 0, 0.6);
+    --mainBackground: #F3F7FA;
+    --inputBackground: #f0f2f7;
+    --burgundy: #b60404;
+    --lightRed: #fc7d7d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--lightBlack);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+	min-width: 320px;
+    background-color: var(--mainBackground);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.noActive {
+    pointer-events: none;
+}
+

@@ -1,0 +1,53 @@
+.photoGridBlock{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 10px 0;
+}
+
+.photoGrid {
+    display: flex;
+}
+
+.listItemStyle {
+    padding: 15px 10px;
+    max-width: 767px;
+}
+
+.logoBlock {
+    padding: 1vh 0 3vh;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.nothingFoundBlock {
+    align-items: center;
+    display: flex;
+    height: 75vh;
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .listItemStyle {
+        max-width: 494px;
+    }
+}
+
+@media (min-width: 768px) {
+    .listItemStyle {
+        padding: 10px;
+    }
+
+    .photoGrid {
+        padding-top: 30px;
+    }
+
+    .logoBlock {
+        padding-top: 1vh;
+    }
+}
+
+@media (min-width: 991px) {
+    .listItemStyle {
+        max-width: 436px;
+    }
+}

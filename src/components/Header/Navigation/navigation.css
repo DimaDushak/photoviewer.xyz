@@ -1,0 +1,26 @@
+.navigation {
+    flex-basis: 50%;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navLink {
+    font-size: 14px
+}
+
+.navLink:hover {
+    color: var(--black);
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        flex-basis: 15%;
+    }
+
+    .navLink {
+        font-size: 16px
+    }
+}

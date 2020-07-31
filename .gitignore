@@ -1,0 +1,8 @@
+dist/
+node_modules/
+src/favicon
+src/fonts
+src/unsplash
+src/htaccess
+tsconfig.json
+package-lock.json

@@ -1,0 +1,88 @@
+.s14 {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.s16 {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.s24 {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.s50 {
+    font-size: 50px;
+    line-height: 52px;
+}
+
+.black {
+    color: var(--black);
+}
+
+.lightBlack {
+    color: var(--lightBlack);
+}
+
+.lightGrey {
+    color: var(--lightGrey);
+}
+
+.lightGrey_black {
+    color: var(--lightGrey);
+}
+
+.blackHover {
+    color: var(--lightBlack);
+    transition: color 0.3s;
+}
+
+.blackHover:hover {
+    color: var(--black);
+    transition: color 0.3s;
+}
+
+.lightGrey_black_hover  {
+    color: var(--lightGrey);
+    transition: color 0.3s;
+}
+
+.lightGrey_black_hover:hover {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+@media (max-width: 767px) {
+    .m_none {
+        display: none;
+    }
+
+    .m12 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .m14 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .m30 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .lightGrey_black {
+        color: var(--black);
+    }
+
+    .lightGrey_black_hover {
+        color: var(--lightBlack);
+    }
+
+    .lightGrey_black_hover:hover {
+        color: var(--black);
+    }
+}

@@ -1,0 +1,32 @@
+.likesBlock {
+    display: flex;
+    align-items: center;
+}
+
+.likesButton {
+    padding-left: 5px;
+}
+
+.likesButton svg {
+    display: block;
+}
+
+.likesButton path {
+    transition: fill 0.3s;
+}
+
+.likesButton:hover path {
+    fill: var(--lightRed);
+    transition: fill 0.3s;
+}
+
+.likedButton path {
+    fill: var(--burgundy);
+}
+
+@media(max-width: 767px) {
+    .likesButton svg {
+        width: 20px;
+        height: 20px;
+    }
+}

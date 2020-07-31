@@ -1,0 +1,113 @@
+.figure {
+    background-color: var(--white);
+    padding: 1.5vh 10px;
+    cursor: default;
+}
+
+.figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dateBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageBlock {
+    position: relative;
+}
+
+.imageBlock button {
+    display: none;
+}
+
+.imageBlock:hover button {
+    display: block;
+}
+
+.photo {
+    max-width: 100%;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .photo_landscape {
+        max-height: 87vh;
+    }
+    
+    .photo_portrait {
+        max-height: 93vh;
+    }
+}
+
+@media (max-width: 991px) {
+    .photo {
+        max-height: 85vh;
+    }
+
+    .imageBlock {
+        position: relative;
+    }
+
+    .button {
+        width: 40px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        background-color: var(--buttonBackground);
+        opacity: 0.6;
+        transition: opacity 0.3s;
+    }
+
+    .button:hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    .leftButton {
+        left: 1%;
+        transform: translateY(-50%);
+    }
+
+    .rightButton {
+        right: 1%;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+@media (min-width: 571px) {
+    .dateBlockOrder {
+        order: 1;
+    }
+
+    .figcaption_column {
+        flex-direction: column;
+        min-width: max-content;
+    }
+
+    .figure_flex {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .button span {
+        width: 18px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        width: 20px;
+        height: 35px;
+    }
+
+    .button span {
+        width: 15px;
+        height: 2px;
+    }
+}
